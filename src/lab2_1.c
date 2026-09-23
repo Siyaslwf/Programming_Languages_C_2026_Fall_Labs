@@ -12,8 +12,12 @@
 */
 
 int sum_to_n(int n) {
-    // TODO: implement sum with a for loop
-    return 0; // placeholder
+    int total = 0;
+    for (int i=1; i <= n; i++){
+        total = total + i;
+
+    }
+    return total; // placeholder
 }
 
 int main(void) {
@@ -23,6 +27,14 @@ int main(void) {
     scanf("%d", &n);
 
     // TODO: validate input, call function, and print result
+    if(n<1){
+        printf("Error: n must be greater than or eqqual to 1\n");
+
+    }else{
+        int result = sum_to_n(n);
+        printf("Result: %d\n" ,result);
+
+    }
 
     return 0;
 }
